@@ -1,11 +1,12 @@
+
 FROM alpine AS builder
-WORKDIR /tmp/dir1
-ADD data.txt /dir1  
+WORKDIR /root
+ADD data.txt /root  
 
 
 FROM fedora AS final
-WORKDIR /tmp/dir2
-ADD data.txt /dir2
+WORKDIR /root
+ADD data.txt /root
 
 
 
