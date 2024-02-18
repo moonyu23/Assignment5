@@ -5,8 +5,9 @@ ADD data.txt /root
 
 
 FROM fedora AS final
-WORKDIR /root
-ADD data.txt /root
+
+ADD --from=builder /root/data.txt /data.txt
+
 
 
 
